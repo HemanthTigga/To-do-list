@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,400;1,100&family=Black+Ops+One&family=Bungee+Shade&family=Comfortaa&family=Fredericka+the+Great&family=Monoton&family=Nixie+One&family=Poppins&family=Rochester&family=Space+Grotesk&display=swap');
+
+/* nice scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #80558C;
+    border-radius: 50px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #c7ccf0 30%, #778fcf 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    /* animation: backgroundAnimation 10s infinite alternate; */
+    overflow: hidden;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+h1 {
+    color: #333;
+    font-family: "Monoton";
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    background-color: #DBDFEA;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* background-color: #DBDFEA; */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.422);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+    margin: 20px auto;
+    height: 650px;
+    background: linear-gradient(315deg, #bcc1e9 30%, #8ba2e2 100%);
+    /* overflow-y: scroll; */
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 2px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+button,
+select {
+    padding: 12px;
+    font-family: "Comfortaa", sans-serif;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    width: calc(33.33% - 12px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus,
+select:focus {
+    background-color: #f2e5e5;
+    outline: none;
+    transform: scale(1.02);
+}
+
+button {
+    background-color: #62bec7;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    padding: 10px 20px;
+    font-family: "Alegreya Sans SC", sans-serif;
+}
+
+button:hover {
+    background-color: #11abb9;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    overflow-y: scroll;
+    height: 310px;
+    padding: 0;
+}
+
+.task {
+    background-color: #CDF0EA;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+    font-family: "Comfortaa", sans-serif;
+    overflow-x: scroll;
+    /* gap: 2px; */
+}
+
+/* .output-task { */
+    /* width: 120px; */
+
+    /* box-sizing: border-box; */
+    /* overflow-x:scroll; */
+/* } */
+
+.task.completed {
+    background-color: #c0e6c8;
+    text-decoration: line-through;
+}
+
+.actions {
+    display: flex;
+    /* overflow-y: scroll; */
+    /* width: 34%; */
+    gap: 5px;
+}
+
+.edit-btn,
+.complete-btn,
+.delete-btn {
+    /* padding: 8px 15px; */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    /* font-size: 10px; */
+    width: 10px;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover,
+.complete-btn:hover,
+.delete-btn:hover {
+    background-color: #11abb9;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.time {
+    font-size: 14px;
+    color: #777;
+}
+
+.task-type {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+#searchInput {
+    width: calc(66.66% - 12px);
+}
+
+#searchBtn {
+    /* background-color: #3498db;  */
+    background-color: #677dd6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: calc(33.33% - 12px);
+}
+
+#searchBtn:hover {
+    background-color: #80558C;
+    transform: scale(1.1);
+}
+label{
+    font-family: "Comfortaa", sans-serif;
+    color: #302d2d;
+    font-size: 15px;
+    margin-left:0px ;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 30px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-message {
+    font-size: 16px;
+}
+
+.notification.active {
+    display: block;
+}
+
+
+
+.mode-toggle{
+    /* position: absolute; */
+    cursor: pointer;
+    padding: 0;
+    margin-left: 95%;
+    right: 0px;
+    width: 20px;
+    transform: scale(1.4);
+    z-index: 9999;
+}
+.mode-toggle:hover{
+    transform: scale(1.6);
+    transition: all ease-in-out 0.3s;
+}
+
+.mode-emoji {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.mode-emoji:hover {
+    transform: scale(1.2);
+}
+
+body.dark-mode {
+    /* background: #222; */
+    background: linear-gradient(135deg, #84919c 30%, #374259 100%);
+
+    /* color: black; */
+}
+
+body.dark-mode #searchBtn {
+    background-color: #465766;
+}
+
+body.dark-mode #searchBtn:hover {
+    background-color: #193951;
+}
+
+body.dark-mode .container {
+    background: linear-gradient(315deg, #84919c 30%, #535d73 100%);
+}
+body.dark-mode label{
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background: linear-gradient(135deg, #bcc1e9 30%, #7a93d8 100%);
+    }
+
+    .container {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.422);
+    }
+    .notification{
+        top: 5%;
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background: linear-gradient(135deg, #bcc1e9 30%, #7a93d8 100%);
+    }
+
+    .container {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.422);
+    }
+    .notification{
+        top: 5%;
+        right: 5%;
+    }
+}
+
+
