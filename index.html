@@ -14,27 +14,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- <div class="mode-toggle-container">
-      <div class="mode-toggle">
-        <span
-          id="darkModeEmoji"
-          class="mode-emoji"
-          role="img"
-          aria-label="Dark Mode"
-          >🌙</span
-        >
-        <span
-          id="lightModeEmoji"
-          class="mode-emoji"
-          role="img"
-          aria-label="Light Mode"
-          >☀️</span
-        >
-      </div>
-    </div> -->
-    <!-- <div id="themeToggle" class="mode-toggle-container mode-emoji theme-toggle"><i class="fa-solid fa-moon"></i></div> -->
     <div class="container">
-      <div id="themeToggle" class="mode-toggle theme-toggle"><i class="fa-solid fa-moon"></i></div>
+      <div id="themeToggle" class="mode-toggle theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+      </div>
 
       <h1>Task Manager</h1>
 
@@ -42,6 +25,7 @@
         <input type="text" id="task" placeholder="Enter a task" />
         <input type="datetime-local" id="taskTime" />
         <select id="taskType">
+          <option value="">Category</option>
           <option value="professional">Professional</option>
           <option value="study">Study</option>
           <option value="personal">Personal</option>
@@ -64,24 +48,28 @@
         <button id="searchBtn">Search</button>
       </div>
       <div class="input-container">
-      <label for="categoryFilter">Filter:</label>
-      <select id="categoryFilter">
-        <option value="all">All</option>
-        <option value="professional">Professional</option>
-        <option value="study">Study</option>
-        <option value="personal">Personal</option>
-        <option value="shopping">Shopping</option>
-        <option value="others">Others</option>
-      </select>
-      <input type="datetime-local" id="reminderDateTime">
+        <label for="categoryFilter">Filter:</label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="professional">Professional</option>
+          <option value="study">Study</option>
+          <option value="personal">Personal</option>
+          <option value="shopping">Shopping</option>
+          <option value="others">Others</option>
+        </select>
+        <input type="datetime-local" id="reminderDateTime" />
 
-      <div id="notification" class="notification">
-        <span class="notification-message">It's time for your reminder!</span>
-    </div>
-    <audio id="reminderAudio" src="https://asset.cloudinary.com/den6snpmc/1205cde4a9b8031902f9fa467a895959" preload="auto"></audio>
-    
-    <button id="setReminderBtn">Set Reminder</button>
-  </div>
+        <div id="notification" class="notification">
+          <span class="notification-message">It's time for your reminder!</span>
+        </div>
+        <audio
+          id="reminderAudio"
+          src="/audio/notification-9-158194.mp3"
+          preload="auto"
+        ></audio>
+
+        <button id="setReminderBtn">Set Reminder</button>
+      </div>
       <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
